@@ -1,6 +1,6 @@
 # AERONET
 
-Materials for ARSET Training - visualizing AERONET data. This repository contains materials for reading and mapping AERONET data and producing time-series plot. Scripts require input from user such as time range, coordinates, level data, product/channel.
+Materials for ARSET Training - visualizing AERONET data. This repository contains materials for reading and mapping AERONET data and producing time-series plot. Scripts require input from user such as time range, coordinates, level data, averaging type, product/channel.
 
 ## Materials
 
