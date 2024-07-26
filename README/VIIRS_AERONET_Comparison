@@ -1,0 +1,81 @@
+# AERONET and VIIRS Data Collocation and Comparison
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Example 1](#example-1)
+  - [Example 2](#example-2)
+- [Contributing](#contributing)
+
+## Overview
+This repository contains a Google Colab notebook designed to compare, collocate, and validate AERONET aerosol optical depth (AOD) data with 
+the VIIRS satellite data at the 550 nm channel. The code performs the following tasks:
+
+1. Mounts Google Drive: To save and access files.
+2. Installs Required Libraries: Ensures all necessary Python packages are available.
+3. Defines Helper Functions: Includes functions for spatial averaging and statistical comparison.
+4. Downloads and Processes VIIRS Data: Retrieves and processes VIIRS aerosol data.
+5. Downloads and Processes AERONET Data: Retrieves and processes AERONET aerosol data.
+6. Performs Data Collocation: Matches AERONET and VIIRS data based on location and time.
+7. Saves Collocated Data: Outputs the collocated data for further analysis.
+
+## Getting Started
+
+### Prerequisites
+Running this code is straightforward. The only requirements are having the means to run a Python notebook file
+(.ipynb). This can be done either in Google Colab (recommended), if the user has a Google account. It can also 
+be done locally on Jupyter Notebook, which requires installation of Anaconda: https://www.anaconda.com/
+
+### Installation
+
+There is a list of libraries that need to be installed before running the code. The netCDF4 library allows reading and writing of netCDF files, provides
+support for multidimensional arrays (e.g., xarray) and handling of large datasets. All other libraries used are already installed on Google Colab/Anaconda 
+by default. Note that the exclamation point is not required when installing through Anaconda command prompt.
+
+!pip install netCDF4
+!pip install xarray
+
+In addition to the packages discussed above, the code also makes use of other libraries such as numpy for array manipulation, math for advanced mathematical 
+functions, scikit-learn for regression and statistical calculations, and matplotlib for plotting.
+
+## Usage
+
+Below are the two cells which require action from the user. The first cell prompts user to allow Google to mount their local
+drive onto the colab notebook. The user will need to allow access from the popup window that shows after running that cell. 
+It also imports the files library, which enables downloading the output files. After that, it creates a directory where the 
+output files are being stored.
+
+### Example 1
+
+from google.colab import files
+from google.colab import drive
+drive.mount('/drive')
+!mkdir Output
+
+The second cell prompts the user for input. The list of parameters are initial and final dates of interest, level of data,
+type of average (daily, hourly or overall site averages), colorbar visual bounds, feature choice (AOD or Angstrom exponent), 
+AOD wavelength, Angstrom exponent parameter, and geographical bounds. Default values have been setup in case a user provides
+an invalid response. Warnings have been put in place in case a user selects a timeframe that is possibly too large for the 
+program to handle. If an URL cannot be generaed from the web services, the user is promped to try again.
+
+### Example 2
+
+dt_initial = '20230626'
+dt_final = '20230702'
+level = 1.5
+average_type = 1
+vis_min = 0.0
+vis_max = 1.0
+feature_choice = 1
+wavelength = 500
+Angstrom_exp = '440-675'
+long_west,long_east = -135,-65
+lat_south,lat_north = 23,53
+
+## Contributing
+The code is for demonstration purposes only. Users are responsible to check for accuracy and revise to fit their objective.
+Report any concern or question related to the code to pawan.gupta@nasa.gov or petar.grigorov@nasa.gov
