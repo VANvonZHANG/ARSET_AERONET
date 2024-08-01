@@ -10,4 +10,4 @@ Materials for ARSET Training - visualizing AERONET data. This repository contain
 | **2. Read and Map AERONET Data (AOD - Interactive)** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1K2K3Si00LO1_HXaPvr6hzDqXjSowA9ZZ) |
 | **3. Read and Map AERONET Data (Inversions)** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Q7Aoh39t4iRIcTae1rcST9NXjxDVDCgM) |
 | **4. AERONET Time Series Plots** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13V4WAnA6dhQR1o2pHXZA0Wm2-H5Xk498) |
-| **5. VIIRS - AERONET Comparison** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/13rh2XIf2LqKm_VHcBcqeCxMGzhuxCm_M#scrollTo=cXtxOJN-ob8S) |
+| **5. VIIRS - AERONET Comparison** | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1Hw60SOMQ-GjI5eqfWxDSAd89zCNdgazC) |
